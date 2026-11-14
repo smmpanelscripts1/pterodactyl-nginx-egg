@@ -2,6 +2,7 @@
 
 # [SETUP] Install necessary packages, including git
 echo -e "[SETUP] Install packages"
+printf '%s\n' 'precedence ::ffff:0:0/96 100' >> /etc/gai.conf
 apt-get update -qq > /dev/null 2>&1 && apt-get install -qq > /dev/null 2>&1 -y git wget perl perl-doc fcgiwrap
 
 # Add VERSION file
